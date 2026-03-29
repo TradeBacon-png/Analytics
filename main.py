@@ -36,7 +36,7 @@ with col1:
 with col2:
     if not wins_df.empty:
         chart_data = wins_df.groupby('year').size().reset_index(name='Wins')
-        st.bar_chart(chart_data, color="#ff4b4b")
+        st.bar_chart(chart_data, x='year', y='Wins', color="#ff4b4b")
     else:
         st.info("No wins found for this period.")
 st.write("### Win History")
