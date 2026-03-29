@@ -18,7 +18,7 @@ def get_f1_data(table):
 
 results = get_f1_data('f1db-races-race-results.csv')     
 driver_choice = st.sidebar.selectbox("Select Driver", ["max-verstappen", "fernando-alonso", "lewis-hamilton", "kimi-antonelli"])
-year_min = st.sidebar.number_input("Since the year", 1990, 2025, 2010)
+year_min = st.sidebar.number_input("Since the year", 1990, 2026, 2010)
 display_name = driver_choice.replace('-', ' ').title()
 wins_df = results[
     (results['driverId'] == driver_choice) & 
