@@ -40,5 +40,5 @@ with col2:
     else:
         st.info("No wins found for this period.")
 st.write("### Win History")
-st.dataframe(wins_df[['year', 'constructorId']].sort_values('year', ascending=False), use_container_width=True)
+st.dataframe(wins_df[['year', 'constructorId']].sort_values('year', ascending=False).rename(columns={'constructorId':'Team'}), use_container_width=True)
 
