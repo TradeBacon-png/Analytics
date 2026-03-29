@@ -1,0 +1,6 @@
+streamlit
+pandas
+io
+requests
+numpy
+zipfile
