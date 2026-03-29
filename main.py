@@ -25,7 +25,7 @@ wins_df = results[
     (results['year'] >= year_min) & 
     (results['positionNumber'] == 1)]
 
-st.title(f"🏎️  {display_name} wins since {year_min}")
+st.title(f"{display_name} wins since {year_min}")
 
 col1, col2 = st.columns([1, 2])
 
@@ -35,7 +35,7 @@ with col1:
 
 with col2:
     if not wins_df.empty:
-        chart_data = wins_df.groupby('year').size()
+        chart_data = wins_df.groupby('year').size().reset_index(name='Wins')
         st.bar_chart(chart_data, color="#ff4b4b")
     else:
         st.info("No wins found for this period.")
